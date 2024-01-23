@@ -202,7 +202,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   )
 
   const footer = React.useMemo(() => <Footer />, [])
-  const cusdis = React.useMemo(() => <Cusdis />, [])
+  const cusdis = React.useMemo(() => <Cusdis pageId={pageId} canonicalPageUrl={canonicalPageUrl} title={title}/>, [pageId,canonicalPageUrl,title])
 
 
   if (router.isFallback) {
