@@ -83,6 +83,7 @@ export const NotionPageHeader: React.FC<{
           {isSearchEnabled && <Search block={block} title={null} />}
         </div>
       </div>
+      <link rel="stylesheet" href="https://use.typekit.net/jux7axx.css">
     </header>
   )
 }
