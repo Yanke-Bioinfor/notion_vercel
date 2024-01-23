@@ -201,8 +201,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
     [block, recordMap, isBlogPost]
   )
 
-  const footer = React.useMemo(() => <Footer />, [])
-  const cusdis = React.useMemo(() => <Cusdis pageId={pageId} />, [pageId])
+  const footer = React.useMemo(() => <Footer pageId={pageId} />, [pageId])
+  //const cusdis = React.useMemo(() => <Cusdis pageId={pageId} />, [pageId])
 
 
   if (router.isFallback) {
@@ -281,11 +281,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        cusdis={cusdis}    
         footer={footer}
       />
 
-      <GitHubShareButton />
 
     </>
   )
