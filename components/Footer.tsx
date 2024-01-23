@@ -39,9 +39,6 @@ export const FooterImpl: React.FC = () => {
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="a260ec53-7bfc-46c1-a7ac-6e74bbd526d8"
-  data-page-id="{{ PAGE_ID }}"
-  data-page-url="{{ PAGE_URL }}"
-  data-page-title="{{ PAGE_TITLE }}"
 ></div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
