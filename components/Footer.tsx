@@ -36,6 +36,8 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
+      <div >TEST 看报错不</div>
+
 
       <div className={styles.copyright}>Copyright {currentYear} {config.author}</div>
 
