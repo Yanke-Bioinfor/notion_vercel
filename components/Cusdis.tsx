@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import styles from './styles.module.css'
 
-export const Cusdis: React.FC = () => {
+export const CusdisImpl: React.FC = () => {
   return (
           <div id="cusdis_thread"
         data-host="https://cusdis.com"
@@ -14,3 +14,4 @@ export const Cusdis: React.FC = () => {
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>  
   )
 }
+export const Cusdis = React.memo(CusdisImpl)
