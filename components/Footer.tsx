@@ -12,12 +12,13 @@ import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 
 import * as config from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
+import * as types from '@/lib/types'
 
 import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
-export const FooterImpl: React.FC = () => {
+export const FooterImpl: React.FC<types.PageProps> = ({pageId}) {
   const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
   const currentYear = new Date().getFullYear()
@@ -36,7 +37,14 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <>
-
+          <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="a260ec53-7bfc-46c1-a7ac-6e74bbd526d8"
+        data-page-id={pageId}
+        data-page-url={pageId}
+        data-page-title={pageId}
+        ></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>  
     <footer className={styles.footer}>
 
       <div className={styles.copyright}>Copyright {currentYear} {config.author}</div>
