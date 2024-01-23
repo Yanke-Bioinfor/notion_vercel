@@ -35,6 +35,7 @@ export const FooterImpl: React.FC = () => {
   }, [])
 
   return (
+    <>
     <div id="cusdis_thread"
       data-host="https://cusdis.com"
       data-app-id="a260ec53-7bfc-46c1-a7ac-6e74bbd526d8"
@@ -147,6 +148,7 @@ export const FooterImpl: React.FC = () => {
       </div>
       
     </footer>
+    </>
   )
 }
 
