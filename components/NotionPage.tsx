@@ -20,6 +20,7 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
+import { Cusdis } from './Cusdis'
 import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
@@ -201,6 +202,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
   )
 
   const footer = React.useMemo(() => <Footer />, [])
+  const cusdis = React.useMemo(() => <Cusdis />, [])
+
 
   if (router.isFallback) {
     return <Loading />
@@ -278,14 +281,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        <div id="cusdis_thread"
-        data-host="https://cusdis.com"
-        data-app-id="a260ec53-7bfc-46c1-a7ac-6e74bbd526d8"
-        data-page-id={pageId}
-        data-page-url={canonicalPageUrl}
-        data-page-title={title}
-        ></div>
-        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>        
+        cusdis={cusdis}    
         footer={footer}
       />
 
