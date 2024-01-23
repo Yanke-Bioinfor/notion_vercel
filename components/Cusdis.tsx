@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const CusdisImpl: React.FC = () => {
+export const CusdisImpl: React.FC = ({ pageId, canonicalPageUrl, title }) => {
   return (
     <>
           <div id="cusdis_thread"
